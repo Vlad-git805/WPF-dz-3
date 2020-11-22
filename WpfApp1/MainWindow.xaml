@@ -1,0 +1,60 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="250" Width="800">
+    <Window.Background>
+        <ImageBrush ImageSource="D:\ШАГ\WPF\dz\dz 3\WpfApp1\WpfApp1\img\taxi.jpg"/>
+    </Window.Background>
+
+    <Grid DockPanel.Dock="Bottom">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Grid.Column="0" Grid.Row="0" Width="150" HorizontalAlignment="Right" HorizontalContentAlignment="Right" Foreground="#FF0003FF">Enter Name and Surname</Label>
+            <TextBox Name="textbox1" Width="300" Grid.Column="1" Grid.Row="0"></TextBox>
+            <Label Grid.Column="0" Grid.Row="1" Width="150" HorizontalAlignment="Right" HorizontalContentAlignment="Right" Foreground="#FF0003FF">Arrival address</Label>
+            <TextBox Name="textbox2" Width="300" Grid.Column="1" Grid.Row="1"></TextBox>
+        <Label Grid.Column="0" Grid.Row="2" Width="150" HorizontalAlignment="Right" HorizontalContentAlignment="Right" Foreground="#FF0003FF">Number of passengers</Label>
+        <RepeatButton Grid.Column="1" Grid.Row="2" Margin = "5" VerticalAlignment = "Top"  HorizontalAlignment = "Left"  Name = "GrowButton"  Width = "80" Delay = "500"  Interval = "100"  Click = "GrowButton_Click" > Up </RepeatButton>
+            <RepeatButton Grid.Column="1" Grid.Row="2" Margin = "5" VerticalAlignment = "Top"  HorizontalAlignment = "Right"  Name = "GrowButton2"  Width = "80" Delay = "500"  Interval = "100"  Click = "GrowButton_Click2" > Down </RepeatButton>
+            <TextBox Text="0" HorizontalContentAlignment="Center" Name="textBoxCountOfPeople" Grid.Column="1" Grid.Row="2" Width="100" IsEnabled="False"></TextBox>
+            <Grid Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label Grid.Column="0" Grid.Row="0" HorizontalContentAlignment="Right" Foreground="#FF0608B7">Economy</Label>
+                <RadioButton Name="radiobutton1" Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center" Margin="5"></RadioButton>
+                <Label Grid.Column="2" Grid.Row="0" HorizontalContentAlignment="Right" Foreground="#FF0003F7">Standard</Label>
+                <RadioButton Name="radiobutton2" Grid.Column="3" Grid.Row="0" HorizontalAlignment="Center" Margin="5"></RadioButton>
+                <Label Grid.Column="4" Grid.Row="0" HorizontalContentAlignment="Right" Foreground="#FF0003FC">Comfort</Label>
+                <RadioButton Name="radiobutton3" Grid.Column="5" Grid.Row="0" HorizontalAlignment="Center" Margin="5"></RadioButton>
+            </Grid>
+            <Label Grid.Column="0" Grid.Row="4" HorizontalAlignment="Right" HorizontalContentAlignment="Right" Foreground="#FF0003FF">Acceptance of terms of use</Label>
+            <CheckBox Name="checkbox" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" Margin="6" Checked="CheckBox_Checked"/>
+            <Button Name="buttonOrder" Grid.Column="0" Grid.Row="5" Height="25" Width="200" Click="Button_Click" IsEnabled="False">Order</Button>
+            <Button Name="buttonCancle" Grid.Column="1" Grid.Row="5" Height="25" Width="200" Click="ButtonCancle_Click">Canсle</Button>
+        </Grid>
+
+
+</Window>
